@@ -1,0 +1,118 @@
+
+
+.main{
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid #DC143C;
+    height: 450px;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 150px;
+    /* border-radius: 5px; */
+    box-shadow: 0 0 8px rgb(0, 0, 0.1);
+    background-color: #fff;
+
+}
+.login-head{
+    background-color: #DC143C;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    /* text-align: center;
+    align-content: center; */
+}
+
+.img {
+    background-color: #fff;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-left: 20px;
+  }
+.login-head img{
+    max-width: 70px;
+    max-height: 70px;
+    margin-top: 23px;
+}
+.login-head h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    margin-top: 15px;
+    font-size: 22px;
+    margin-bottom: 0;
+}
+.logo-name{
+    margin-left: 10px;
+}
+.logo-name p{
+    margin-top: -25px;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 13px;
+}
+
+/* -------------------------------------- */
+.login-main{
+    padding: 20px;
+    margin-top: 15px;
+}
+.login-main label{
+    /* display: block; */
+    font-size: 15px;
+    color: black;
+}
+input[type="text"],
+input[type="Password"]{
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid #DC143C;
+    border-radius: 4px;
+    /* border-bottom: 1px solid #928b8b; */
+    text-align: start;
+    font-size: 15px;   
+}
+input[type="Password"]{
+    margin-bottom: 8px;
+}
+
+button[type="submit"]{
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 10px;
+    background-color: #DC143C;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+button[type="submit"]:hover{
+    background-color: #DC143C;
+}
+.forget-pass{
+    margin-top: 0;
+    text-align: end;
+}
+.forget-pass a{
+    text-decoration: none;
+    color: #DC143C;
+    font-size: 13px;
+}
+.forget-pass a:hover{
+    text-decoration: underline;
+}
+.register{
+    text-align: center;
+    font-size: 13px;
+    margin-top: 10px;
+    color: #6a6969;
+}
+.register a{
+    text-decoration: none;
+    color: #DC143C;
+}
+.register a:hover{
+    text-decoration: underline;
+}
+

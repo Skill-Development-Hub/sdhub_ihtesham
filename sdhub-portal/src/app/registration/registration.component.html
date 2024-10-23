@@ -1,0 +1,220 @@
+<div class="main-register">
+  <div class="register-head">
+    <div class="register-head-div1">
+      <div class="img">
+        <img src="./logo.png" alt="" />
+      </div>
+      <div class="logo-name">
+        <h1>Student Registration</h1>
+      </div>
+    </div>
+
+
+  </div>
+
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Personal Details</ng-template>
+        <!-- ------------Form Section---------------------------------------- -->
+
+        <div class="form-section">
+          <h2 style="padding: 5px;">Applicant Informaton</h2>
+
+
+          <div class="form-div1">
+            <div class="form-div-sub">
+              <label for="StudentId">Student ID</label><br />
+              <input type="text" matInput formControlName="StudentId" placeholder="Enter Student ID" />
+            </div>
+            <div class="form-div-sub">
+              <label for="date">Application Date</label><br />
+              <input type="date" matInput formControlName="date" placeholder="date" />
+            </div>
+          </div>
+
+          <label for="name">Full Name</label><br />
+          <div class="full-name-input">
+            <input class="name" type="text" matInput formControlName="fisrtName" placeholder="First Name" />
+            <input class="name" type="text" matInput formControlName="middleName" placeholder="Middle Name" />
+            <input class="name" type="text" matInput formControlName="lastName" placeholder="Last Name" />
+          </div>
+
+          <label for="name">Father's Name</label><br />
+          <div class="full-name-input">
+            <input class="name" type="text" matInput formControlName="f_Firstname" placeholder="First Name" />
+            <input class="name" type="text" matInput formControlName="f_Middlename" placeholder="Middle Name" />
+            <input class="name" type="text" matInput formControlName="f_Lastname" placeholder="Last Name" />
+          </div>
+
+          <div class="form-div1">
+            <div class="form-div-sub">
+              <label for="DOB">Date Of Birth</label><br />
+              <input class="d-o-b" type="date" matInput formControlName="DOB" placeholder="date" />
+            </div>
+            <div class="form-div-sub">
+              <label for="number">Phone No</label><br />
+              <input class="input-phone" type="number" matInput formControlName="number"
+                placeholder="Enter Your Phone Number" />
+            </div>
+            <div class="form-div-sub">
+              <label for="mail">Email</label><br />
+              <input type="email" matInput formControlName="mail" placeholder="Enter Your Email" />
+            </div>
+          </div>
+          <label for="Address">Address(Permanent)</label><br />
+          <textarea rows="3" placeholder="Enter Address"></textarea>
+
+          <div class="form-div1">
+            <div class="form-div-sub">
+              <label for="contact">Parent/Guardian Contact Details</label><br />
+              <input type="text" matInput formControlName="contact" placeholder="Enter Contact Details" />
+            </div>
+            <div class="form-div-sub">
+              <label for="income">Total Household Income</label><br />
+              <input matInput formControlName="income" type="text" placeholder="Household Income" />
+            </div>
+          </div>
+
+
+        </div>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <!--  personal details end-->
+    <!-- qualifications start -->
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Educational Details</ng-template>
+
+        <!-- ------------Form Section---------------------------------------- -->
+
+        <div class="form-section">
+          <h2 style="padding: 5px;">Course Details</h2>
+
+
+          <label for="course">Course Apply For</label><br>
+          <select name="Course" id="course" formControlName="course">
+            <option value="" disabled selected>Select a Course</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Tally">Tally</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+          </select>
+
+          <div class="main-input">
+            <div class="sub-input">
+              <label for="Degree">Degree</label><br>
+              <input type="text" id="degree" matInput formControlName="degree" placeholder="Enter Your Degree" />
+            </div>
+            <div class="sub-input">
+              <label for="Collage Name">Collage Name</label><br>
+              <input type="text" id="collage" matInput formControlName="collage"
+                placeholder="Enter Your Collage Name" />
+            </div>
+          </div>
+
+          <div class="main-input">
+            <div class="sub-input">
+              <label for="Year Of Passing">Year Of Passing</label><br>
+              <input type="text" id="passing" matInput formControlName="passing" placeholder="Enter Year Of Passing" />
+            </div>
+            <div class="sub-input">
+              <label for="Percentage">Percentage</label><br>
+              <input type="text" id="percentage" matInput formControlName="percentage"
+                placeholder="Enter Your Percentage" />
+            </div>
+          </div>
+
+        </div>
+
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- qualification ends -->
+    <!-- declrations start -->
+    <mat-step [stepControl]="thirdFormGroup" label="Declration">
+      <form [formGroup]="thirdFormGroup">
+        <!-- ------------Form Section---------------------------------------- -->
+
+        <div class="form-section">
+          <h2>Declaration and Submission</h2>
+
+          <div class="declare">
+            <input type="checkbox" id="decl" name="decl" />
+            <p>
+              I declare that all the information given here is true and complete to
+              the best of my knowledge.I understand that false or misleading
+              information may result in my rejection of the application.
+            </p>
+          </div>
+
+          <div class="main-input">
+            <div class="sub-input">
+              <label for="Signiture">Student's Signiture</label><br />
+              <input type="text" id="signiture" matInput formControlName="signiture"
+                placeholder="Type full name to sign"  />
+            </div>
+            <div class="sub-input">
+              <label for="Signiture">Parent/Guardian Signiture</label><br />
+              <input type="text" id="parent-signiture" matInput formControlName="parent_signiture"
+                placeholder="Type full name to sign"  />
+            </div>
+          </div>
+
+          <label for="pdate">Date</label><br />
+          <input type="date" id="date" matInput formControlName="pdate" placeholder="date" />
+
+          <div class="enclosures">
+            <p>ENCLOSURES</p>
+            <ul>
+              <li>Passport size photo</li>
+              <li>Copy of Adhar Card</li>
+              <li>Copy of photo ID proof</li>
+              <li>Copy of collage ID card</li>
+              <li>Original Certificate</li>
+              <li>Income Certificate</li>
+            </ul>
+          </div>
+
+          <div class="">
+            <span class="upload">
+              Upload Photo <input type="file" name="photo">
+            </span>
+            <span class="upload">
+              Upload Adhaar <input type="file" name="aadhaar">
+            </span>
+            <span class="upload">
+              Upload Marksheet<input type="file" name="marksheet">
+            </span>
+            <span class="upload"> Upload college Id card <input type="file" name="clgId">
+            </span>
+            <span class="upload">
+              Upload Income Certificate<input type="file" name="income">
+            </span>
+          </div>
+
+        </div>
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="submit()">Submit</button>
+        </div>
+      </form>
+    </mat-step>
+    <!-- declration ends -->
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <h3>You have Registered Successfully</h3>
+      <div>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>
