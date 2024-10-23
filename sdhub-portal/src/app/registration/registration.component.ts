@@ -69,8 +69,7 @@ export class RegistrationComponent implements OnInit {
       
     }
   submit() {
-    console.log(this.firstFormGroup.controls['course'].value);
-    console.log(this.firstFormGroup.controls['firstName'].value);
+    console.log(this.firstFormGroup.controls['fisrtName'].value);
     console.log(this.firstFormGroup.controls['f_Firstname'].value);
 
 

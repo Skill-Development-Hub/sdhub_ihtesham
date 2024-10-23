@@ -41,20 +41,6 @@
   align-items: center;
 }
 
-.register-head-div2 {
-  height: 80px;
-  width: 80px;
-  border: 1px dotted #fff;
-  margin-right: 20px;
-  align-content: center;
-  display: block;
-}
-
-.register-head-div2 p {
-  font-size: 8px;
-  color: #fff;
-  text-align: center;
-}
 
 .img {
   background-color: #fff;
