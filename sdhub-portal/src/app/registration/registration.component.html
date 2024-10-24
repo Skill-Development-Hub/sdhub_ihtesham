@@ -63,8 +63,8 @@
               <input type="email" matInput formControlName="mail" placeholder="Enter Your Email" />
             </div>
           </div>
-          <label for="Address">Address(Permanent)</label><br />
-          <textarea rows="3" placeholder="Enter Address"></textarea>
+          <label for="address">Address(Permanent)</label><br />
+          <textarea type="text" matInput formControlName="address" rows="3" placeholder="Enter Address"></textarea>
 
           <div class="form-div1">
             <div class="form-div-sub">
@@ -147,14 +147,7 @@
         <div class="form-section">
           <h2>Declaration and Submission</h2>
 
-          <div class="declare">
-            <input type="checkbox" id="decl" name="decl" />
-            <p>
-              I declare that all the information given here is true and complete to
-              the best of my knowledge.I understand that false or misleading
-              information may result in my rejection of the application.
-            </p>
-          </div>
+        
 
           <div class="main-input">
             <div class="sub-input">
@@ -183,38 +176,134 @@
               <li>Income Certificate</li>
             </ul>
           </div>
-
-          <div class="">
+ 
+  <div style=" border-top: 1px solid #fb90a5; ">
             <span class="upload">
-              Upload Photo <input type="file" name="photo">
+             1. Upload Photo <input type="file" name="photo">
             </span>
             <span class="upload">
-              Upload Adhaar <input type="file" name="aadhaar">
+            2. Upload Adhaar <input type="file" name="aadhaar">
             </span>
             <span class="upload">
-              Upload Marksheet<input type="file" name="marksheet">
+             3. Upload Marksheet<input type="file" name="marksheet">
             </span>
-            <span class="upload"> Upload college Id card <input type="file" name="clgId">
+            <span class="upload">4. Upload college Id card <input type="file" name="clgId">
             </span>
             <span class="upload">
-              Upload Income Certificate<input type="file" name="income">
+             5. Upload Income Certificate<input type="file" name="income">
             </span>
           </div>
 
         </div>
-
+        <div class="declare">
+          <input type="checkbox" id="decl" name="decl" />
+          I declare that all the information given here is true and complete to
+          the best of my knowledge.I understand that false or misleading
+          information may result in my rejection of the application.
+        </div>
         <div>
           <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="submit()">Submit</button>
+          <button mat-button (click)="dataverify()" matStepperNext>Next</button>
+
         </div>
       </form>
     </mat-step>
     <!-- declration ends -->
     <mat-step>
       <ng-template matStepLabel>Done</ng-template>
-      <h3>You have Registered Successfully</h3>
+      <h5>Verify the details</h5>
+      <div>
+          <!-- ------------Form Section---------------------------------------- -->
+<!--   
+          <div class="form-section">
+            <h2 style="padding: 5px;">Applicant Informaton</h2>
+  
+  
+            <div class="form-div1">
+              <div class="form-div-sub">
+                <label>Student ID:</label><br />
+              </div>
+              <div class="form-div-sub">
+                <label>Application Date:</label>
+                {{firstFormData['date']}}
+              </div>
+            </div>
+  
+            <label>Full Name:</label>
+            <div class="full-name-input">
+              {{firstFormData['fisrtName']}} {{firstFormData['middleName']}} {{firstFormData['lastName']}} 
+            </div>
+  
+            <label>Father's Name:</label>
+            <div class="full-name-input">
+              {{firstFormData['f_Firstname']}} {{firstFormData['f_Middlename']}} {{firstFormData['f_Lastname']}} 
+            </div>
+  
+            <div class="form-div1">
+              <div class="form-div-sub">
+                <label>Date Of Birth:</label>
+                {{firstFormData['DOB']}}
+              </div>
+              <div class="form-div-sub">
+                <label>Phone No:</label>
+                {{firstFormData['number']}}
+              </div>
+              <div class="form-div-sub">
+                <label>Email:</label>
+                {{firstFormData['mail']}}
+              </div>
+            </div>
+            <label>Address:</label>
+            {{firstFormData['Address']}}
+  
+            <div class="form-div1">
+              <div class="form-div-sub">
+                <label>Parent/Guardian Contact Details</label><br />
+                {{firstFormData['contact']}}
+              </div>
+              <div class="form-div-sub">
+                <label>Total Household Income</label><br />
+                {{firstFormData['income']}}
+              </div>
+            </div>
+          </div> -->
+          <table>
+            <tr>
+              <th>Student ID</th>
+              <th>:</th>
+              <td>
+                {{firstFormData['StudentId']}}
+
+              </td>
+             </tr>
+           <tr>
+            <th>Name</th>
+          <th>:</th>
+            <td>
+              {{firstFormData['fisrtName']}} {{firstFormData['middleName']}} {{firstFormData['lastName']}} 
+            </td>
+           </tr>
+           <tr>
+            <th>Father's Name</th>
+            <th>:</th>
+            <td>
+              {{firstFormData['f_Firstname']}} {{firstFormData['f_Middlename']}} {{firstFormData['f_Lastname']}}
+            </td>
+           </tr>
+           <tr>
+            <th>Course Selected</th>
+            <th>:</th>
+            <td>
+              {{secondFormData['course']}} 
+            </td>
+           </tr>
+
+          </table>
+      </div>
       <div>
         <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button (click)="submit()">Submit</button>
+
       </div>
     </mat-step>
   </mat-stepper>
