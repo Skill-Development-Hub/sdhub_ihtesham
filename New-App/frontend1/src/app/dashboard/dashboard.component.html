@@ -1,0 +1,12 @@
+<mat-toolbar class="topbar" color="primary">
+    <span><a routerLink="/">SD-Hub</a></span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/signin">Sign In</button>
+    <button mat-button routerLink="/signup">Sign Up</button>
+</mat-toolbar>
+<h3>Dashboard</h3>
+<div>
+    <mat-card>
+        Users : {{userlist}}
+    </mat-card>
+</div>

@@ -1,0 +1,34 @@
+
+<div class="main">
+    <div class="login-head">
+        <div class="img">
+            <img src="./logo.png" alt="logo"  >
+        </div>
+        <div class="logo-name">
+            <h1>Student Login</h1>
+            <p>Skill Development Hub</p>
+        </div>
+    </div>
+    <div class="login-main">
+        <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+
+            <mat-form-field appearance="fill">
+                <mat-label>UserName</mat-label>
+                <input matInput formControlName="username" type="text" required>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" type="password" required>
+            </mat-form-field>
+
+            <button mat-raised-button color="primary" type="submit">Sign In</button>
+        </form>
+        <div class="forget-pass">
+            <a href="#">Forget Password?</a>
+        </div>
+        <div class="register">
+            <p>Don't have an account ? <a routerLink="/signup">Sign Up</a></p>
+        </div>
+      </div>
+</div>
