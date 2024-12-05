@@ -11,10 +11,10 @@
     </div>
     <div class="login-main">
         <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
-
+            <p>{{error_message}}</p>
             <mat-form-field appearance="fill">
                 <mat-label>UserName</mat-label>
-                <input matInput formControlName="username" type="text" required>
+                <input matInput formControlName="email" type="text" required>
             </mat-form-field>
 
             <mat-form-field appearance="fill">

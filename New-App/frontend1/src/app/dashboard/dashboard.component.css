@@ -5,3 +5,22 @@
 .topbar {
     background-color: burlywood;
 }
+
+.example-card {
+    margin-left: 20px;
+    max-width: 400px;
+}
+  
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}

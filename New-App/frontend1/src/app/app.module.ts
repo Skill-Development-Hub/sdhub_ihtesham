@@ -9,6 +9,7 @@ import { MatButton, MatButtonModule } from '@angular/material/button';
 import { MatCalendar } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatButtonModule,
     MatCardModule,
     MatToolbarModule,
+    MatTableModule,
     RouterModule
   ],
   providers: [
